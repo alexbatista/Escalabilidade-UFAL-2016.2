@@ -1,24 +1,6 @@
 # Escalabilidade-UFAL-2016.2
 
 
-## Código Lambda
-- Executar com Python 3.6
-- A biblioteca Requests é um dependência (código já compactado)
-
-
-## API GATEWAY
-- método POST
-- Formato (JSON) da requisição a ser enviada:
-```
-{
-'host': 'http://www.myurl.com',
-'totalRequests': 'qtdTotaldeRequisicoes',
-'distributionType':'distribution',
-'email':'email@email.com',
-'testName':'MyTest'
-}
-```
-
 ## Arquitetura utilizada
 ![Arquitetura](escalabilidade.png)
 
@@ -39,6 +21,29 @@ onde:
  - **distributionType** indica a maneira com a qual as requisições serão feitas. As opções são: *Normal*; *Gausiana*,*xxxxxx*
  - **email** indica o email para o qual o relatório será enviado após a conclusão dos testes
  - **testName** indica o nome do teste dado pelo Usuário
+
+- O API GateWay chama a função Lambda responsável em ativar o testador da EC2.
+- Após a execução do testador (script python) os resultados ficam armazenados localmente e no S3.
+
+    
+
+## Código Lambda
+- Executar com Python 3.6
+- A biblioteca Requests é um dependência (código já compactado)
+
+
+## API GATEWAY
+- método POST
+- Formato (JSON) da requisição a ser enviada:
+```
+{
+'host': 'http://www.myurl.com',
+'totalRequests': 'qtdTotaldeRequisicoes',
+'distributionType':'distribution',
+'email':'email@email.com',
+'testName':'MyTest'
+}
+```
 
  ## Python
  - qrequests;
