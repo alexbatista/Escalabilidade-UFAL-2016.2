@@ -16,13 +16,15 @@ A figura acima apresenta o esquema geral utilizado para o testador de carga.
 }
 ```
 onde:
-  - **host** indica a URL do sistema/site a ser testado
-  - **totalRequests** indica a quantidade de requisições a serem feitas
-  - **distributionType** indica a maneira com a qual as requisições serão feitas. As opções são: *Normal*; *Gausiana*,*xxxxxx*
-  - **email** indica o email para o qual o relatório será enviado após a conclusão dos testes
-  - **testName** indica o nome do teste dado pelo Usuário
-
+```
+   - **host** indica a URL do sistema/site a ser testado
+   - **totalRequests** indica a quantidade de requisições a serem feitas
+   - **distributionType** indica a maneira com a qual as requisições serão feitas. As opções são: *Normal*; *Gausiana*,*xxxxxx*
+   - **email** indica o email para o qual o relatório será enviado após a conclusão dos testes
+   - **testName** indica o nome do teste dado pelo Usuário
+```
 - O API GateWay chama a função Lambda responsável em ativar o testador da EC2.
+
 - Após a execução do testador (script python) os resultados ficam armazenados localmente e no S3.
 
     
