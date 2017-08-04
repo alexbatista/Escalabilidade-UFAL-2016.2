@@ -2,8 +2,8 @@
 
 
 ## Código Lambda
-- Executar com Python 3.6
-- A biblioteca Requests é um dependência (código já comprimido)
+- Executar com Python 3.6;
+- A biblioteca Requests é um dependência (código já comprimido).
 
 
 ## API GATEWAY
@@ -17,4 +17,8 @@
 'testName':event['testName']
 }
 
-
+## Python
+- qrequests;
+- boto3;
+- numpy;
+- resource.
