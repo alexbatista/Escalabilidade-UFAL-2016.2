@@ -39,3 +39,9 @@ onde:
  - **distributionType** indica a maneira com a qual as requisições serão feitas. As opções são: *Normal*; *Gausiana*,*xxxxxx*
  - **email** indica o email para o qual o relatório será enviado após a conclusão dos testes
  - **testName** indica o nome do teste dado pelo Usuário
+
+ ## Python
+ - qrequests;
+ - boto3;
+ - numpy;
+ - resource.
